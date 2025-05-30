@@ -76,7 +76,6 @@ li {
     color: #666;
 }
 
-/* Styles pour le menu hamburger */
 .hamburger {
     display: none;
     cursor: pointer;
@@ -95,7 +94,6 @@ li {
     transition: 0.3s;
 }
 
-/* Styles pour la navigation mobile */
 @media screen and (max-width: 768px) {
     .hamburger {
         display: block;
@@ -128,28 +126,3 @@ li {
         background-color: #ff8585;
     }
 }
-
-/* Styles pour la navigation desktop */
-@media screen and (min-width: 769px) {
-    .hamburger {
-        display: none;
-    }
-
-    nav {
-        display: block;
-        text-align: center;
-        padding: 10px;
-        background-color: #FF6B6B;
-    }
-
-    nav a {
-        color: white;
-        text-decoration: none;
-        padding: 10px 20px;
-        margin: 0 5px;
-    }
-
-    nav a:hover {
-        background-color: #ff8585;
-    }
-} 

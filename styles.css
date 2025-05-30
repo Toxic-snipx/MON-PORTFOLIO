@@ -1,0 +1,155 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #FFE5E5;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 10px;
+    background-color: #FF6B6B;
+    color: white;
+    padding: 10px;
+}
+
+header h1 {
+    margin: 0;
+    padding: 0;
+}
+
+header h2 {
+    margin: 5px 0;
+    padding: 0;
+}
+
+header p {
+    margin: 5px 0;
+    padding: 0;
+}
+
+section {
+    margin-bottom: 30px;
+    background-color: white;
+    padding: 20px;
+}
+
+article {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #FFF5F5;
+}
+
+h1 { 
+    color: white;
+}
+
+h2 { 
+    color: #FF6B6B;
+}
+
+a { 
+    color: #4A90E2;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #FF6B6B;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    color: #FF6B6B;
+}
+
+ul {
+    background-color: #FFF5F5;
+    padding: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+    color: #666;
+}
+
+/* Styles pour le menu hamburger */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+/* Styles pour la navigation mobile */
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: #FF6B6B;
+        padding: 20px;
+        text-align: center;
+        z-index: 1000;
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    nav a {
+        display: block;
+        padding: 10px;
+        color: white;
+        text-decoration: none;
+    }
+
+    nav a:hover {
+        background-color: #ff8585;
+    }
+}
+
+/* Styles pour la navigation desktop */
+@media screen and (min-width: 769px) {
+    .hamburger {
+        display: none;
+    }
+
+    nav {
+        display: block;
+        text-align: center;
+        padding: 10px;
+        background-color: #FF6B6B;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+        margin: 0 5px;
+    }
+
+    nav a:hover {
+        background-color: #ff8585;
+    }
+} 

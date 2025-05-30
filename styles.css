@@ -1,97 +1,184 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Permanent Marker', cursive;
     line-height: 1.6;
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #FFE5E5;
-}
-
-header {
-    text-align: center;
-    margin-bottom: 10px;
-    background-color: #FF6B6B;
-    color: white;
-    padding: 10px;
-}
-
-header h1 {
-    margin: 0;
-    padding: 0;
-}
-
-header h2 {
-    margin: 5px 0;
-    padding: 0;
-}
-
-header p {
-    margin: 5px 0;
-    padding: 0;
-}
-
-section {
-    margin-bottom: 30px;
-    background-color: white;
-    padding: 20px;
-}
-
-article {
-    margin-bottom: 20px;
-    padding: 15px;
-    background-color: #FFF5F5;
-}
-
-h1 { 
-    color: white;
-}
-
-h2 { 
-    color: #FF6B6B;
-}
-
-a { 
-    color: #4A90E2;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #FF6B6B;
-}
-
-footer {
-    text-align: center;
-    margin-top: 40px;
-    padding-top: 20px;
-    color: #FF6B6B;
-}
-
-ul {
-    background-color: #FFF5F5;
-    padding: 20px;
-}
-
-li {
-    margin-bottom: 10px;
-    color: #666;
+    background-color: #FFD6E0;
 }
 
 .hamburger {
     display: none;
     cursor: pointer;
     padding: 10px;
-    position: absolute;
-    top: 10px;
-    right: 10px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    background: #98FB98;
+    border: 2px solid #FF69B4;
+    border-radius: 5px;
 }
 
 .hamburger span {
     display: block;
     width: 25px;
     height: 3px;
-    background-color: white;
+    background-color: #FF69B4;
     margin: 5px 0;
     transition: 0.3s;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #98FB98;
+    padding: 60px 20px 20px;
+    text-align: center;
+    z-index: 999;
+    border-bottom: 3px solid #FF69B4;
+}
+
+nav.active {
+    display: block;
+}
+
+nav a {
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.2em;
+    margin: 5px 0;
+    background: #FFF0F5;
+    border: 2px solid #FF69B4;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background: #FF69B4;
+    color: white;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 10px;
+    background-color: #98FB98;
+    color: #333;
+    padding: 20px;
+    border: 5px solid #FF69B4;
+}
+
+header h1 {
+    font-family: 'Bungee Shade', cursive;
+    font-size: 3em;
+    margin: 0;
+    padding: 0;
+    color: #FF69B4;
+}
+
+header h2 {
+    font-family: 'Bungee Shade', cursive;
+    font-size: 2em;
+    margin: 5px 0;
+    padding: 0;
+    color: #4169E1;
+}
+
+header p {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.2em;
+    margin: 5px 0;
+    padding: 0;
+    color: #333;
+}
+
+section {
+    margin-bottom: 30px;
+    background-color: #E6E6FA;
+    padding: 20px;
+    border: 3px solid #98FB98;
+}
+
+article {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #FFF0F5;
+    border: 2px solid #FF69B4;
+}
+
+h1 { 
+    font-family: 'Bungee Shade', cursive;
+    color: #FF69B4;
+    font-size: 2.5em;
+}
+
+h2 { 
+    font-family: 'Bungee Shade', cursive;
+    color: #4169E1;
+    font-size: 2em;
+}
+
+h3 {
+    font-family: 'Bungee Shade', cursive;
+    font-size: 1.8em;
+    color: #FF69B4;
+}
+
+a { 
+    font-family: 'Permanent Marker', cursive;
+    color: #4169E1;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+a:hover {
+    color: #FF69B4;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #98FB98;
+    color: #333;
+    font-family: 'Permanent Marker', cursive;
+    border: 5px solid #FF69B4;
+}
+
+ul {
+    background-color: #E6E6FA;
+    padding: 20px;
+    font-family: 'Permanent Marker', cursive;
+    border: 2px solid #98FB98;
+}
+
+li {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 1.2em;
+}
+
+p {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.2em;
+    color: #333;
 }
 
 @media screen and (max-width: 768px) {
@@ -101,28 +188,23 @@ li {
 
     nav {
         display: none;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        right: 0;
-        background-color: #FF6B6B;
-        padding: 20px;
-        text-align: center;
-        z-index: 1000;
     }
 
     nav.active {
         display: block;
     }
-
-    nav a {
-        display: block;
-        padding: 10px;
-        color: white;
-        text-decoration: none;
-    }
-
-    nav a:hover {
-        background-color: #ff8585;
-    }
 }
+
+@media screen and (min-width: 769px) {
+    .hamburger {
+        display: none !important;
+    }
+
+    nav {
+        display: none !important;
+    }
+
+    nav.active {
+        display: none !important;
+    }
+} 

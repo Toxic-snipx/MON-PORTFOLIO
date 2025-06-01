@@ -9,36 +9,22 @@ body {
 
 .hamburger {
     display: none;
-    cursor: pointer;
-    padding: 10px;
     position: fixed;
     top: 20px;
     right: 20px;
-    z-index: 1000;
+    padding: 10px;
     background: #98FB98;
     border: 2px solid #FF69B4;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .hamburger span {
     display: block;
     width: 25px;
     height: 3px;
-    background-color: #FF69B4;
     margin: 5px 0;
-    transition: 0.3s;
-}
-
-.hamburger.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-}
-
-.hamburger.active span:nth-child(2) {
-    opacity: 0;
-}
-
-.hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -7px);
+    background: #FF69B4;
 }
 
 nav {
@@ -48,32 +34,23 @@ nav {
     left: 0;
     right: 0;
     background: #98FB98;
-    padding: 60px 20px 20px;
+    padding: 20px;
     text-align: center;
     z-index: 999;
-    border-bottom: 3px solid #FF69B4;
 }
 
-nav.active {
-    display: block;
-}
+nav.active { display: block; }
 
 nav a {
     display: block;
     padding: 10px;
-    color: #333;
-    text-decoration: none;
-    font-family: 'Permanent Marker', cursive;
-    font-size: 1.2em;
     margin: 5px 0;
+    color: #333;
     background: #FFF0F5;
     border: 2px solid #FF69B4;
     border-radius: 5px;
-}
-
-nav a:hover {
-    background: #FF69B4;
-    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
 }
 
 header {
@@ -85,29 +62,15 @@ header {
     border: 5px solid #FF69B4;
 }
 
-header h1 {
+header h1, header h2 {
     font-family: 'Bungee Shade', cursive;
-    font-size: 3em;
     margin: 0;
     padding: 0;
-    color: #FF69B4;
 }
 
-header h2 {
-    font-family: 'Bungee Shade', cursive;
-    font-size: 2em;
-    margin: 5px 0;
-    padding: 0;
-    color: #4169E1;
-}
-
-header p {
-    font-family: 'Permanent Marker', cursive;
-    font-size: 1.2em;
-    margin: 5px 0;
-    padding: 0;
-    color: #333;
-}
+header h1 { font-size: 3em; color: #FF69B4; }
+header h2 { font-size: 2em; color: #4169E1; }
+header p { font-size: 1.2em; margin: 5px 0; }
 
 section {
     margin-bottom: 30px;
@@ -123,34 +86,21 @@ article {
     border: 2px solid #FF69B4;
 }
 
-h1 { 
-    font-family: 'Bungee Shade', cursive;
-    color: #FF69B4;
-    font-size: 2.5em;
+h1 { font-family: 'Bungee Shade', cursive; color: #FF69B4; font-size: 2.5em; }
+h2 { font-family: 'Bungee Shade', cursive; color: #4169E1; font-size: 2em; }
+h3 { font-family: 'Bungee Shade', cursive; color: #FF69B4; font-size: 1.8em; }
+
+a { color: #4169E1; text-decoration: none; font-size: 1.2em; }
+
+p, li { font-size: 1.2em; color: #333; }
+
+ul {
+    background-color: #E6E6FA;
+    padding: 20px;
+    border: 2px solid #98FB98;
 }
 
-h2 { 
-    font-family: 'Bungee Shade', cursive;
-    color: #4169E1;
-    font-size: 2em;
-}
-
-h3 {
-    font-family: 'Bungee Shade', cursive;
-    font-size: 1.8em;
-    color: #FF69B4;
-}
-
-a { 
-    font-family: 'Permanent Marker', cursive;
-    color: #4169E1;
-    text-decoration: none;
-    font-size: 1.2em;
-}
-
-a:hover {
-    color: #FF69B4;
-}
+li { margin-bottom: 10px; }
 
 footer {
     text-align: center;
@@ -158,53 +108,13 @@ footer {
     padding: 20px;
     background-color: #98FB98;
     color: #333;
-    font-family: 'Permanent Marker', cursive;
     border: 5px solid #FF69B4;
 }
 
-ul {
-    background-color: #E6E6FA;
-    padding: 20px;
-    font-family: 'Permanent Marker', cursive;
-    border: 2px solid #98FB98;
+@media screen and (max-width: 768px) { 
+    .hamburger { display: block; } 
 }
 
-li {
-    margin-bottom: 10px;
-    color: #333;
-    font-size: 1.2em;
-}
-
-p {
-    font-family: 'Permanent Marker', cursive;
-    font-size: 1.2em;
-    color: #333;
-}
-
-@media screen and (max-width: 768px) {
-    .hamburger {
-        display: block;
-    }
-
-    nav {
-        display: none;
-    }
-
-    nav.active {
-        display: block;
-    }
-}
-
-@media screen and (min-width: 769px) {
-    .hamburger {
-        display: none !important;
-    }
-
-    nav {
-        display: none !important;
-    }
-
-    nav.active {
-        display: none !important;
-    }
+@media screen and (min-width: 769px) { 
+    .hamburger, nav { display: none; } 
 } 
